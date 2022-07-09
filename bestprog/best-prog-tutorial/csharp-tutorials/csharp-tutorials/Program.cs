@@ -10,21 +10,30 @@ namespace csharp_tutorials
     {
         static void Main(string[] args)
         {
-            Months mn;
-            Months mn2;
+            _002_Indexer d = new _002_Indexer(15);
+            char c;
 
-            mn = Months.January;
-            mn2 = mn + 1;
+            c = d[0];  // c = 'A'
+            Console.WriteLine("Result of 0: {0}", c);
+            c = d[3];  // c = 'D'
+            Console.WriteLine("Result of 3: {0}", c);
+            c = d[10]; // c = 'K'
+            Console.WriteLine("Result of 10: {0}", c);
+            c = d[14]; // c = 'O'
+            Console.WriteLine("Result of 14: {0}", c);
+            c = d[15]; // c = 'A' - access attempt beyond limits
+            Console.WriteLine("Result of 15: {0}", c);
+            c = d[30]; // c = 'A' - access attempt beyond limits
+            Console.WriteLine("Result of 30: {0}", c);
+            c = d[50]; // c = 'A' - access attempt beyond limits
+            Console.WriteLine("Result of 50: {0}", c);
+            d[0] = 'Z';  // c = 'A'
+            c = d[0];
+            Console.WriteLine("Result of 0: {0}", c);
+            Console.ReadKey();
 
-            Console.WriteLine($"{mn} - {mn2}");
-
-            
         }
     }
 
-    enum Months
-    {
-        January, February, Murch, April, May, Jun, July, August, September, October, November, December
-    };
 
 }
