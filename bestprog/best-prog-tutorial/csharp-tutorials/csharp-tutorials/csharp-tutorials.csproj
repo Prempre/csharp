@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accessing_metadata.cs" />
+    <Compile Include="001_nullable.cs" />
+    <Compile Include="000_metadata.cs" />
+    <Compile Include="002_Indexer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
